@@ -24,9 +24,35 @@ This is a browser extension that helps you clear the browser cache and provides 
    - This will remove any cached data, allowing you to start your browsing session with a clean slate.
 6. Additional functionality can be added to the extension as per your requirements.
 
+
+## Update Extension with New Version
+
+If you have an existing version of the extension installed and want to update it with a new version, follow these steps:
+
+1. Download the updated extension file (e.g., `.crx` or `.zip`) from the release page or any other specified source.
+
+2. Open the Chrome browser and navigate to the extensions management page by entering `chrome://extensions` in the address bar.
+
+3. Enable developer mode by toggling the switch located at the top right corner of the extensions management page.
+
+4. Locate the existing version of the extension in the list of installed extensions and click on the "Remove" button to uninstall it.
+
+5. Extract the updated extension file if it's in a compressed format (e.g., `.zip`).
+
+6. Click on the "Load unpacked" button at the top left corner of the extensions management page.
+
+7. In the file selection dialog, navigate to the location where you downloaded or extracted the updated extension file and select the extension folder.
+
+8. Click "Open" to load the updated extension. The new version should now appear in the list of installed extensions.
+
+9. Verify that the extension is updated by checking any new features, changes, or improvements mentioned in the release notes or update documentation.
+
+Please note that manually updating the extension will not retain any user-specific settings or data. If necessary, make sure to backup or transfer any important data before updating the extension.
+
+
 ## License
 
-This project is licensed under the [https://github.com/lahiruprabathft](1.0).
+This project is licensed under the [](1.0).
 
 ## Contributing
 

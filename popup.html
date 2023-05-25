@@ -7,6 +7,7 @@
   <title>Cache Clear Extension</title>
   <script src="popup.js"></script>
    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Quicksand:wght@300;400;500;600&display=swap');
 /* design and develop By - Lahiru Prabath 
 https://github.com/lahiruprabathft
  */
@@ -20,6 +21,8 @@ body{
     justify-content: center;
     align-items: center;
     background: #000;
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
 }
 
 .clearCacheButton {
@@ -214,7 +217,7 @@ h1:hover::before {
     /* margin: 0 auto; */
     /* justify-content:end; */
     font-size: 8px;
-    margin-bottom: 2rem; 
+    margin-bottom: 1rem; 
     margin-top: 3rem;
     margin-right: 1rem;
     /* float: right; */
@@ -227,6 +230,20 @@ a{
     color: #ffffff53
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+
+}
+.version{
+    font-size: 8px;
+    color: #ffffff53;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
   </style>
 
 </head>
@@ -241,8 +258,8 @@ https://github.com/lahiruprabathft
             <input type="text" id="nameInput" placeholder="Enter your name" class="usertext"><button id="okButton" class="okbtn"> Submit</button>
         </div>
        
-        <h1 id="greeting">Hello, [Name]!</h1>
-        <h2>Good Day .... </h2>
+        <h1 id="greeting">Hello, [Name]..</h1>
+        <h2>Good Day .... !</h2>
         <h3>"Start your day with a clean slate – clear your browser cache."</h3>
         <hr>
     
@@ -258,7 +275,12 @@ https://github.com/lahiruprabathft
     </main>
 
 
-    <div class="p"> Design By: &nbsp; <a href="https://github.com/lahiruprabathft" target="_blank">Lairu Prabath </a></div>
+    <div class="footer">
+        <div class="version"> Version:1.0 </div>
+        <div class="p"> Design By: &nbsp; <a href="https://github.com/lahiruprabathft" target="_blank">Lairu Prabath </a></div>
+
+    </div>
+    
 </body>
 </html>
 <!-- /* design and develop By - Lahiru Prabath 

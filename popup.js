@@ -12,18 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // User name function
   if (storedName) {
-    greeting.textContent = 'Hello, ' + storedName + '!';
+    greeting.textContent = 'Hello, ' + storedName + '..';
     nameInput.style.display = 'none';
     okButton.style.display = 'none';
   } else {
     nameInput.addEventListener('input', function() {
       var newName = nameInput.value;
-      greeting.textContent = 'Hello, ' + newName + '!';
+      greeting.textContent = 'Hello, ' + newName + '..';
     });
 
     okButton.addEventListener('click', function() {
       var newName = nameInput.value;
-      greeting.textContent = 'Hello, ' + newName + '!';
+      greeting.textContent = 'Hello, ' + newName + '..';
       localStorage.setItem('userName', newName);
       nameInput.style.display = 'none';
       okButton.style.display = 'none';
