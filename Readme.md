@@ -26,7 +26,7 @@ This is a browser extension that helps you clear the browser cache and provides 
 
 ## License
 
-This project is licensed under the [PersonalDevelop BY :https://github.com/lahiruprabathft](1.0).
+This project is licensed under the [https://github.com/lahiruprabathft](1.0).
 
 ## Contributing
 
