@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "ClearCache",
   "version": "1.0",
+  "description": "Clear Cache Reminder is a helpful Chrome extension that reminds you to clear your browser cache before starting your day. By clicking the 'Clear Cache' button, you can quickly remove cached data and enjoy a smoother browsing experience. The extension also features a customizable greeting message and the ability to save your preferred name for a personalized touch. Stay organized and optimize your browsing routine with Clear Cache Reminder!",
   "action": {
     "default_popup": "popup.html"
   },

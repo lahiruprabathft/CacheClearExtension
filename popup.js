@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var nameInput = document.getElementById('nameInput');
   var greeting = document.getElementById('greeting');
   var okButton = document.getElementById('okButton');
+  var changeNameButton = document.getElementById('changeNameButton');
   var storedName = localStorage.getItem('userName');
 
   // User name function
