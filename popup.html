@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cache Clear Extension</title>
+  <script src="popup.js"></script>
+   <style>
+/* design and develop By - Lahiru Prabath 
+https://github.com/lahiruprabathft
+ */
+body{
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.clearCacheButton {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin: 2rem auto;
+
+}
+
+.clearCacheButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+   
+}
+.clearCacheButton:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.clearCacheButton:active {
+    color: #000
+}
+
+.clearCacheButton:active:after {
+    background: transparent;
+}
+
+.clearCacheButton:hover:before {
+    opacity: 1;
+}
+
+.clearCacheButton:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+main{
+    display: grid;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 0;
+    font-family: sans-serif;
+ 
+}
+.datetime{
+    margin-top: 0;
+    display: block;
+    text-align: center;
+}
+.date{
+    font-size: 1.5rem;
+    color: #c3a109
+}
+
+.time{
+    margin: 1rem 0;
+    color: #c9a30b;
+    font-size: 3rem;
+}
+
+hr{
+    width: 100%;
+    background-color: #ffcc00;
+}
+h2{
+
+    color:#fff;
+    font-size: 1.5rem;
+}
+
+h3{
+    color:#fff;
+    font-size: 1rem;
+    font-weight:200;
+
+}
+
+
+h1 {
+    font-size: 3rem;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #ffcc00;
+  opacity: 0.8;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+}
+
+
+ .userinput{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+ }       
+.usertext {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #999;
+  background-color: transparent;
+  padding: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  color: #fff;
+}
+
+.usertext:focus {
+  border-bottom-color: #f00; /* Change to your desired color */
+
+}
+    
+
+.okbtn {
+    /* width: 20px; */
+    /* height: 20px; */
+      border: none;
+    outline: none;
+    background-color: #f7fbfc32;
+    color: #00a2ff;
+    /* padding: 20px; */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.okbtn:hover {
+ color: #48ff00;
+}
+
+
+  </style>
+
+</head>
+
+<!-- /* design and develop By - Lahiru Prabath 
+https://github.com/lahiruprabathft
+ */ -->
+<body>
+
+    <main>
+        <div class="userinput">
+            <input type="text" id="nameInput" placeholder="Enter your name" class="usertext"><button id="okButton" class="okbtn"> Submit</button>
+        </div>
+       
+        <h1 id="greeting">Hello, [Name]!</h1>
+        <h2>Good Day .... </h2>
+        <h3>"Start your day with a clean slate – clear your browser cache."</h3>
+        <hr>
+    
+    <div class="datetime">
+        <div class="date" id="dateDisplay"></div>
+        <div class="time " id="timeDisplay"></div>
+    </div>
+       
+    
+      <button class="clearCacheButton" id="clearCacheButton">Clear Cache</button>
+
+
+    </main>
+
+</body>
+</html>
+<!-- /* design and develop By - Lahiru Prabath 
+https://github.com/lahiruprabathft
+ */ -->
